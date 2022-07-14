@@ -1,0 +1,56 @@
+#form{
+    width: 50%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 28px;
+    padding: 20px lem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+fieldset{
+    border-radius: 15px 15px 15px 15px;
+    background: url(vote.jpg) no-repeat center;
+    background-size: 90% 95%;
+}
+
+label{
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+}
+
+input[type=date],[type=number],[type=text],select{
+    background: rgb(255, 255, 255);
+    border: 1px solid #000;
+    border-radius: 2px;
+    border-width: 1px;
+    color: rgb(15, 13, 13);
+    font-size: 15px;
+    margin: 5px;
+    padding: 12px 12px;
+    display: inline-block;
+}
+
+input[type=radio].g{
+    margin-left: 35px;
+}
+
+input[type=Submit]{
+    background-color: #000;
+    color: #FFF;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 24px;
+    margin: 12px 14px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+}

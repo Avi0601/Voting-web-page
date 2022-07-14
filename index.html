@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting Management System</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="form">
+
+        <form action="Thn.html">
+
+        <fieldset>
+            <legend>
+                <h1>E-Voting Management System</h1>
+            </legend>
+            <label>Name:</label>&nbsp;
+            <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+            <label>DOB:</label>&nbsp;
+            <input type="date" name="dob" required><br><br>
+
+            <label>Gender:</label>&nbsp;
+            <input type="radio" name="gender" class="g" value="male">Male
+            <input type="radio" name="gender" class="g" value="female" checked>Female
+            <br><br>
+
+            <label>Father Name:</label>&nbsp;
+            <input type="text" name="fname" placeholder="Enter your Father name" required><br><br>
+
+            <label>Voter ID:</label> &nbsp;
+            <input type="number" name="Voter id" placeholder="Enter your Voter ID" maxlength="12" required><br><br>
+
+            <label>Political Parties:</label>&nbsp;
+            <select mame="political">
+                <option value="NULL">Choose Political Party</option>
+                <option value="NDA">NDA</option>
+                <option value="UPA">UPA</option>
+            </select>
+            <br>
+
+        </fieldset>
+        <input type="Submit" name="Submit" value="Submit">
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwggQ2onvuT4R9Qnv8JUsG-jnGrNZfXLiWq2Mt_iKjCD1KpHvrAYFckDcFikHoLHCm8/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks, Your Vote has been Submitted"))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
